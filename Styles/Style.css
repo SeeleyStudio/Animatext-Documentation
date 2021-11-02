@@ -323,3 +323,41 @@ iframe
 {
     color: #806000;
 }
+
+.effectTable
+{
+	float: left;
+	width: 256px;
+	margin-right: 24px;
+}
+
+.effectTable td
+{
+	padding: 6px;
+}
+
+.effectTable img
+{
+	width: 240px; 
+	height: 135px;
+}
+
+.effectTable .title
+{
+	background: #eee;
+}
+
+.effectTable .script
+{
+	width: 20px;
+}
+
+.effectTable .description
+{
+	padding: 6px;
+}
+
+.effectTables
+{
+	display: inline-block;
+}
