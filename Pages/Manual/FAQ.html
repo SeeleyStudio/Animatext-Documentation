@@ -36,9 +36,9 @@
 				<p>No. Animatext uses an independent text analysis system.</p>
 				
 				<li><p><b>Could I add extra word breaks and line breaks?</b></p></li>
-				<p>Yes. You can modify in "TextInfo.cs" script.</p>	
-<pre><code>    <span class="note">//Word breaks.</span>
-    <span class="system">private</span> <span class="keyword">static readonly</span> <span class="return">char[]</span> _wordBreaks = <span class="keyword">new</span> char[]
+				<p>You can modify in "TextInfo.cs" script or add the characters to the break character list.</p>	
+<pre><code>    <span class="note">//TextInfo.cs - Line 60</span>
+    <span class="system">private</span> <span class="keyword">static readonly</span> <span class="return">List&lt;char></span> _wordBreaks = <span class="keyword">new</span> List&lt;char>
     {
         '\u000A', <span class="note">//Line feeds.</span>
         '\u0020', <span class="note">//Spaces.</span>
@@ -46,11 +46,25 @@
         '\u3000', <span class="note">//Ideographic spaces.</span>
     };
 
-    <span class="note">//Line breaks.</span>
-    <span class="system">private</span> <span class="keyword">static readonly</span> <span class="return">char[]</span> _lineBreaks = <span class="keyword">new</span> char[]
+    <span class="system">private</span> <span class="keyword">static readonly</span> <span class="return">List&lt;char></span> _lineBreaks = <span class="keyword">new</span> List&lt;char>
     {
         '\u000A', <span class="note">//Line feeds.</span>
     };
+	
+</code></pre>
+
+<pre><code><span class="system">using</span> Animatext;
+<span class="system">using</span> UnityEngine;
+
+<span class="system">public</span> <span class="keyword">class</span> <span class="class">ExampleF01</span> : <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" target="_blank" ><span class="class">MonoBehaviour</span></a>
+{
+    <span class="note">//Add the break characters before parsing text.</span>
+    <span class="system">private</span> <span class="return">void</span> <span class="method">Awake</span>()
+    {
+        <a href="../API/TextInfo.html" target="_blank" ><span class="class">TextInfo</span></a>.wordBreaks.Add(',');
+        <a href="../API/TextInfo.html" target="_blank" ><span class="class">TextInfo</span></a>.lineBreaks.Add('.');
+    }
+}
 </code></pre>
 			</ul>
 		</div>	
