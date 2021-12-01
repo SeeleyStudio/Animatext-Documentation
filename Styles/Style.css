@@ -361,3 +361,20 @@ iframe
 {
 	display: inline-block;
 }
+
+.links
+{
+	padding-left: 18px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.links .separator
+{
+	padding: 0 9px;
+}
+
+.links a, .links .separator
+{
+	color: #888888;
+}
