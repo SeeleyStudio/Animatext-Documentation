@@ -30,29 +30,13 @@
 				<p>In a multiple-preset effect, "Ani" is executed first, then "mat" and finally "ext". In multiple effects, "Ani", "mat" and "ext" are executed at the same time.</p>
 
 				<li><p><b>What should I do if the effect added via script is not executed?</b></p></li>
-				<p>New effects added to the Animatext component will not be executed automatically. You need to use "<a href="../API/BaseAnimatext.html" target="_parent">BaseAnimatext</a>.Refresh" or "<a href="../API/BaseAnimatext.html" target="_parent">BaseAnimatext</a>.SetText" method. Link：<a href="CreatingEffects.html" target="_parent">Creating Effects (C#)</a> .</p>
+				<p>New effects added to the Animatext component will not be executed automatically. You need to use "<a href="../API/BaseAnimatext.html" target="_parent">BaseAnimatext</a>.Refresh" or "<a href="../API/BaseAnimatext.html" target="_parent">BaseAnimatext</a>.SetText". Link：<a href="CreatingEffects.html" target="_parent">Creating Effects (C#)</a> .</p>
 
 				<li><p><b>Are the units of words and lines the same as those in the text components(UGUI, TextMeshPro)?</b></p></li>
 				<p>No. Animatext uses an independent text analysis system.</p>
 				
 				<li><p><b>Could I add extra word breaks and line breaks?</b></p></li>
-				<p>You can modify in "TextInfo.cs" script or add the characters to the break character list.</p>	
-<pre><code>    <span class="note">//TextInfo.cs - Line 60</span>
-    <span class="system">private</span> <span class="keyword">static readonly</span> <span class="return">List&lt;char></span> _wordBreaks = <span class="keyword">new</span> List&lt;char>
-    {
-        '\u000A', <span class="note">//Line feeds.</span>
-        '\u0020', <span class="note">//Spaces.</span>
-        '\u00A0', <span class="note">//No-break spaces.</span>
-        '\u3000', <span class="note">//Ideographic spaces.</span>
-    };
-
-    <span class="system">private</span> <span class="keyword">static readonly</span> <span class="return">List&lt;char></span> _lineBreaks = <span class="keyword">new</span> List&lt;char>
-    {
-        '\u000A', <span class="note">//Line feeds.</span>
-    };
-	
-</code></pre>
-
+				<p>Yes. You can add characters to "<a href="../API/TextInfo.html" target="_blank" >TextInfo</a>.wordBreaks" and "<a href="../API/TextInfo.html" target="_blank" >TextInfo</a>.lineBreaks".</p>	
 <pre><code><span class="system">using</span> Animatext;
 <span class="system">using</span> UnityEngine;
 
