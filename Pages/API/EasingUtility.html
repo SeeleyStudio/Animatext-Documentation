@@ -27,9 +27,9 @@
 						<li><p><strong>continuousEasing</strong>Whether the easing is continuous. "Yes" means the easing value is from 0 to 1 and then from 1 to 0. "No" means the easing value is from 0 to 1 and then from -1 to 0.</p></li>
 					</ul>
 				</li>
-				<li class="sameName"><p><strong>Bounce(float value, int bounces, float bounciness)</strong><small>float</small>A bounce easing method that starts quickly at 0 and ends slowly at 0.</p></li>
+				<li class="sameName"><p><strong>Bounce(float value, int bounces, float bounciness)</strong><small>float</small>A bounce easing method that starts at 0 and ends at 0.</p></li>
 				<li>
-					<p><strong>Bounce(float value, int bounces, float bounciness, out float extraValue)</strong><small>float</small>A bounce easing method that starts quickly at 0 and ends slowly at 0.</p>
+					<p><strong>Bounce(float value, int bounces, float bounciness, out float extraValue)</strong><small>float</small>A bounce easing method that starts at 0 and ends at 0.</p>
 					<ul>
 						<li><p><strong>bounces</strong>The number of bounces.</p></li>
 						<li><p><strong>bounciness</strong>The degree of each bounce.</p></li>
@@ -43,14 +43,14 @@
 					</ul>
 				</li>
 				<li>
-					<p><strong>EaseBack(float value, float amplitude)</strong><small>float</small>A back easing method that starts slowly at 0 and ends quickly at 1.</p>
+					<p><strong>EaseBack(float value, float amplitude)</strong><small>float</small>A back easing method that starts at 0 and ends at 1.</p>
 					<ul>
 						<li><p><strong>amplitude</strong>The amplitude of back.</p></li>
 					</ul>
 				</li>
-				<li class="sameName"><p><strong>EaseBounce(float value, int bounces, float bounciness)</strong><small>float</small>A bounce easing method that starts slowly at 0 and ends quickly at 1.</p></li>
+				<li class="sameName"><p><strong>EaseBounce(float value, int bounces, float bounciness)</strong><small>float</small>A bounce easing method that starts at 0 and ends at 1.</p></li>
 				<li>
-					<p><strong>EaseBounce(float value, int bounces, float bounciness, out float extraValue)</strong><small>float</small>A bounce easing method that starts slowly at 0 and ends quickly at 1.</p>
+					<p><strong>EaseBounce(float value, int bounces, float bounciness, out float extraValue)</strong><small>float</small>A bounce easing method that starts at 0 and ends at 1.</p>
 					<ul>
 						<li><p><strong>bounces</strong>The number of bounces.</p></li>
 						<li><p><strong>bounciness</strong>The degree of each bounce.</p></li>
@@ -63,9 +63,9 @@
 				<li><p><strong>EaseCubicIn(float value)</strong><small>float</small>A cubic easing method that starts slowly at 0 and ends quickly at 1.</p></li>
 				<li><p><strong>EaseCubicInOut(float value)</strong><small>float</small>A cubic easing method that starts slowly at 0, speeds up, and then ends slowly at 1.</p></li>					
 				<li><p><strong>EaseCubicOut(float value)</strong><small>float</small>A cubic easing method that starts quickly at 0 and ends slowly at 1.</p></li>					
-				<li class="sameName"><p><strong>EaseElastic(float value, int oscillations, float stiffness)</strong><small>float</small>An elastic easing method that starts slowly at 0 and ends quickly at 1.</p></li>
+				<li class="sameName"><p><strong>EaseElastic(float value, int oscillations, float stiffness)</strong><small>float</small>An elastic easing method that starts 0 and ends at 1.</p></li>
 				<li>
-					<p><strong>EaseElastic(float value, int oscillations, float stiffness, out float extraValue)</strong><small>float</small>An elastic easing method that starts slowly at 0 and ends quickly at 1.</p>
+					<p><strong>EaseElastic(float value, int oscillations, float stiffness, out float extraValue)</strong><small>float</small>An elastic easing method that starts at 0 and ends at 1.</p>
 					<ul>
 						<li><p><strong>oscillations</strong>The number of full oscillations.</p></li>
 						<li><p><strong>stiffness</strong>The oscillation stiffness. The higher stiffness means the oscillation will reduce in intensity faster.</p></li>
@@ -83,11 +83,18 @@
 				<li><p><strong>EaseQuintInOut(float value)</strong><small>float</small>A quintic easing method that starts slowly at 0, speeds up, and then ends slowly at 1.</p></li>					
 				<li><p><strong>EaseQuintOut(float value)</strong><small>float</small>A quintic easing method that starts quickly at 0 and ends slowly at 1.</p></li>
 				<li><p><strong>EaseSineIn(float value)</strong><small>float</small>A sinusoidal easing method that starts slowly at 0 and ends quickly at 1.</p></li>
-				<li><p><strong>EaseSineInOut(float value)</strong><small>float</small>A sinusoidal easing method that starts slowly at 0, speeds up, and then ends slowly at 1.</p></li>					
-				<li><p><strong>EaseSineOut(float value)</strong><small>float</small>A sinusoidal easing method that starts quickly at 0 and ends slowly at 1.</p></li>	
-				<li class="sameName"><p><strong>Elastic(float value, int oscillations, float stiffness)</strong><small>float</small>An elastic easing method that starts quickly at 0 and ends slowly at 0.</p></li>
+				<li><p><strong>EaseSineInOut(float value)</strong><small>float</small>A sinusoidal easing method that starts slowly at 0, speeds up, and then ends slowly at 1.</p></li>	
 				<li>
-					<p><strong>Elastic(float value, int oscillations, float stiffness, out float extraValue)</strong><small>float</small>An elastic easing method that starts quickly at 0 and ends slowly at 0.</p>
+					<p><strong>EaseStep(float value, int steps, <a href="StepType.html" target="_blank">StepType</a> stepType)</strong><small>float</small>A step easing method that starts at 0 and ends at 1.</p>
+					<ul>
+						<li><p><strong>steps</strong>The number of steps.</p></li>
+						<li><p><strong>stepType</strong>The calculation method of the step easing.</p></li>
+					</ul>
+				</li>
+				<li><p><strong>EaseSineOut(float value)</strong><small>float</small>A sinusoidal easing method that starts quickly at 0 and ends slowly at 1.</p></li>	
+				<li class="sameName"><p><strong>Elastic(float value, int oscillations, float stiffness)</strong><small>float</small>An elastic easing method that starts at 0 and ends at 0.</p></li>
+				<li>
+					<p><strong>Elastic(float value, int oscillations, float stiffness, out float extraValue)</strong><small>float</small>An elastic easing method that starts at 0 and ends at 0.</p>
 					<ul>
 						<li><p><strong>oscillations</strong>The number of full oscillations.</p></li>
 						<li><p><strong>stiffness</strong>The oscillation stiffness. The higher stiffness means the oscillation will reduce in intensity faster.</p></li>
@@ -97,7 +104,7 @@
 				<li>
 					<p><strong>Wave(float value, int waves)</strong><small>float</small>A wave easing method that starts at 0 and ends at 0.</p>
 					<ul>
-						<li><p><strong>waves</strong>The number of waves</p></li>
+						<li><p><strong>waves</strong>The number of waves.</p></li>
 					</ul>
 				</li>
 			</ul>

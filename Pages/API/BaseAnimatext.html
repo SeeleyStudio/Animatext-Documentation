@@ -26,6 +26,7 @@
 				<li><p><strong>effects</strong><small>List<<a href="Effect.html" target="_blank" >Effect</a>></small>The effect list.</p></li>
 				<li><p><strong>effectText</strong><small>string</small>The text containing the effect.</p></li>
 				<li><p><strong>inputText</strong><small>string</small>The text initially entered in the text component.</p></li>
+				<li><p><strong>isLocked</strong><small>bool</small>Whether the Animatext component is locked. New text will not be parsed if the Animatext component is locked.</p></li>
 				<li><p><strong>outputText</strong><small>string</small>The parsed text of the text component.</p></li>
 				<li><p><strong>parsedText</strong><small>string</small>The parsed text of the Animatext component.</p></li>
 				<li><p><strong>retainedText</strong><small>string</small>The retained text of the text component at runtime.</p></li>
@@ -73,17 +74,19 @@
 				<li><p><strong>OnDisable()</strong><a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" target="_blank" >UnityEngine.MonoBehaviour</a>.OnDisable</p></li>
 				<li><p><strong>OnEnable()</strong><a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" target="_blank" >UnityEngine.MonoBehaviour</a>.OnEnable</p></li>
 				<li>
-					<p><strong>SetCharColors(int outputIndex, Color[] colors)</strong>Sets color array of the character vertices.</p>
+					<p><strong>SetCharColors(int outputIndex, Color[] colors, Color[] originColors)</strong>Sets color array of the character vertices.</p>
 					<ul>
 						<li><p><strong>outputIndex</strong>The index of the output text.</p></li>
-						<li><p><strong>colors</strong>The color array of the character vertices.</p></li>
+						<li><p><strong>colors</strong>The current color array of the character vertices.</p></li>
+						<li><p><strong>originColors</strong>The origin color array of the character vertices.</p></li>
 					</ul>	
 				</li>				
 				<li>
-					<p><strong>SetCharPositions(int outputIndex, Vector3[] positions)</strong>Sets position array of the character vertices.</p>
+					<p><strong>SetCharPositions(int outputIndex, Vector3[] positions, Vector3[] originPositions)</strong>Sets position array of the character vertices.</p>
 					<ul>
 						<li><p><strong>outputIndex</strong>The index of the output text.</p></li>
-						<li><p><strong>positions</strong>The position array of the character vertices.</p></li>
+						<li><p><strong>positions</strong>The current position array of the character vertices.</p></li>
+						<li><p><strong>originPositions</strong>The origin position array of the character vertices.</p></li>
 					</ul>				
 				</li>
 				<li><p><strong>SetComponentDirty()</strong>Marks the text component as dirty.</p></li>
@@ -98,12 +101,13 @@
 			<ul>
 				<li><p><strong>EndEffect(int index)</strong>Ends the effect.</p></li>
 				<li><p><strong>EndEffects()</strong>Ends all the effects.</p></li>
+				<li><p><strong>LockText(string text)</strong>Locks the text of the Animatext component. The Animatext component is locked after using this method.</p></li>
 				<li><p><strong>PauseEffect(int index)</strong>Pauses the effect.</p></li>
 				<li><p><strong>PauseEffects()</strong>Pauses all the effects.</p></li>
 				<li><p><strong>PlayEffect(int index)</strong>Plays the effect.</p></li>
 				<li><p><strong>PlayEffects()</strong>Plays all the effects.</p></li>
 				<li>
-					<p><strong>Refresh(bool refreshEffects)</strong>Refreshes the Animatext component. This method is used after adding new effects or modifying preset tags.</p>
+					<p><strong>Refresh(bool refreshEffects)</strong>Refreshes the Animatext component. The Animatext component is unlocked after using this method.</p>
 					<ul>
 						<li><p><strong>refreshEffects</strong>Whether to refresh the effects.</p></li>
 					</ul>					
@@ -120,7 +124,7 @@
 				<li><p><strong>SetEffectsSpeed(float speed)</strong>Sets the speed of all the effects.</p></li>
 				<li><p><strong>SetEffectTime(int index, float time)</strong>Sets the time of the effect.</p></li>
 				<li><p><strong>SetEffectsTime(float time)</strong>Sets the time of all the effects.</p></li>
-				<li><p><strong>SetText(string text)</strong>Sets the text of the Animatext component.</p></li>
+				<li><p><strong>SetText(string text)</strong>Sets the text of the Animatext component. The Animatext component is unlocked after using this method.</p></li>
 				<li><p><strong>StartEffect(int index)</strong>Starts the effect.</p></li>
 				<li><p><strong>StartEffects()</strong>Starts all the effects.</p></li>
 				<li><p><strong>StopEffect(int index)</strong>Stops the effect.</p></li>

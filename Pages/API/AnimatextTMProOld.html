@@ -39,13 +39,7 @@
 					<ul>
 						<li><p><strong>override</strong><a href="BaseAnimatext.html" target="_blank">BaseAnimatext</a>.Awake</p></li>
 					</ul>					
-				</li>
-				<li>
-					<p><strong>CheckTextDirty()</strong><small>bool</small>Checks whether the text in the text component has been modified.</p>
-					<ul>
-						<li><p><strong>override</strong><a href="BaseAnimatext.html" target="_blank">BaseAnimatext</a>.CheckTextDirty</p></li>
-					</ul>					
-				</li>				
+				</li>			
 				<li>
 					<p><strong>GetCharColors(int outputIndex)</strong><small>Color[]</small>Gets color array of the character vertices.</p>
 					<ul>
@@ -93,20 +87,22 @@
 					</ul>					
 				</li>
 				<li>
-					<p><strong>SetCharColors(int outputIndex, Color[] colors)</strong>Sets color array of the character vertices.</p>
+					<p><strong>SetCharColors(int outputIndex, Color[] colors, Color[] originColors)</strong>Sets color array of the character vertices.</p>
 					<ul>
 						<li><p><strong>outputIndex</strong>The index of the output text.</p></li>
-						<li><p><strong>colors</strong>The color array of the character vertices.</p></li>
+						<li><p><strong>colors</strong>The current color array of the character vertices.</p></li>
+						<li><p><strong>originColors</strong>The origin color array of the character vertices.</p></li>
 						<li><p><strong>override</strong><a href="BaseAnimatext.html" target="_blank">BaseAnimatext</a>.SetCharColors</p></li>
-					</ul>					
-				</li>
+					</ul>	
+				</li>				
 				<li>
-					<p><strong>SetCharPositions(int outputIndex, Vector3[] positions)</strong>Sets position array of the character vertices.</p>
+					<p><strong>SetCharPositions(int outputIndex, Vector3[] positions, Vector3[] originPositions)</strong>Sets position array of the character vertices.</p>
 					<ul>
 						<li><p><strong>outputIndex</strong>The index of the output text.</p></li>
-						<li><p><strong>positions</strong>The position array of the character vertices.</p></li>				
+						<li><p><strong>positions</strong>The current position array of the character vertices.</p></li>
+						<li><p><strong>originPositions</strong>The origin position array of the character vertices.</p></li>
 						<li><p><strong>override</strong><a href="BaseAnimatext.html" target="_blank">BaseAnimatext</a>.SetCharPositions</p></li>
-					</ul>					
+					</ul>				
 				</li>
 				<li>
 					<p><strong>SetComponentDirty()</strong>Sets the text as dirty in the text component.</p>
@@ -133,17 +129,6 @@
 					</ul>					
 				</li>	
 			</ul>			
-
-			<h3>Public</h3>
-			<ul>
-				<li>
-					<p><strong>Refresh(bool refreshEffects)</strong>Refreshes the Animatext component. This method is used after adding new effects or modifying preset tags.</p>
-					<ul>
-						<li><p><strong>refreshEffects</strong>Whether to refresh the effects.</p></li>
-						<li><p><strong>override</strong><a href="BaseAnimatext.html" target="_blank">BaseAnimatext</a>.Refresh</p></li>
-					</ul>					
-				</li>
-			</ul>
 		</div>
 	</body>
 </html>
