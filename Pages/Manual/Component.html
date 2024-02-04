@@ -11,16 +11,17 @@
 		<iframe src="BaseManual.html"></iframe>	
 		<div class="content">
 			<h1>Component</h1>
-			<img src="../../Images/Component.png">
-			
-			<h2>Buttons</h2>			
+
+			<h2>Animatext</h2>
+			<img src="../../Images/BaseAnimatext.png">
+			<h3>Buttons</h3>
 			<ul>
 				<li><p><strong>New Effect</strong>Click it to add a new effect in the first place.</p></li>
 				<li><p><strong>Documentation</strong>Click it to view the documentation.</p></li>
 				<li><p><strong>Settings</strong> Click it to enter or exit system settings.</p></li>		
 			</ul>
 			
-			<h2>Settings</h2>
+			<h3>Settings</h3>
 			<ul>
 				<li>
 					<p><strong>Retained Text</strong>The retained text content in the text component after the Animatext component parsing.</p>				
@@ -73,13 +74,37 @@
 				</li>
 				<li><p><strong>Scale SDF</strong>The scale of SDF. (TextMeshPro only)</p></li>
 			</ul>
-
-			<h2>Menu</h2>
+			<h3>Menu</h3>
 			<ul>
 				<li><p><strong>Log Origin Text</strong>Log the origin text of the Animatext component.</p></li>	
 				<p>In special cases, the input text is different from the displayed text in the text component. You can use this method to get the original parsed text in the Animatext component.</p>
 				<img src="../../Images/LogOriginText.png">
 			</ul>
+			
+			
+			<h2>AnimatextEventHelper</h2>
+			<img src="../../Images/AnimatextEventHelper.png">
+			<h3>Buttons</h3>
+			<ul>
+				<li><p><strong>New Effect</strong>Click it to add an event helper in the first place.</p></li>
+				<li><p><strong>Documentation</strong>Click it to view the documentation.</p></li>	
+			</ul>
+			<h3>Event Helper</h3>
+			<ul>
+				<li><p><strong>Animatext</strong>The Animatext component of the effects. If the value of "Animatext" is null, it will automatically get the Animatext component of the current game object at runtime.</p></li>
+				<li><p><strong>Index List</strong>The index list of the effects in the Animatext component. If the index list contains -1, it means the index list contains all the indexes of the effects in the Animatext component.</p></li>	
+				<li>
+					<p><strong>Events</strong>The events of the effects.</p>
+					<ul>
+						<li><p><strong>onEndEvent</strong><small>The event added to <a href="Effect.html" target="_blank" >Effect</a>.onEnd.</p></li>
+						<li><p><strong>onPauseEvent</strong><small>The event added to <a href="Effect.html" target="_blank" >Effect</a>.onPause.</p></li>
+						<li><p><strong>onPlayEvent</strong><small>The event added to <a href="Effect.html" target="_blank" >Effect</a>.onPlay.</p></li>
+						<li><p><strong>onProceedEvent</strong><small>The event added to <a href="Effect.html" target="_blank" >Effect</a>.onProceed.</p></li>
+						<li><p><strong>onStartEvent</strong><small>The event added to <a href="Effect.html" target="_blank" >Effect</a>.onStart.</p></li>
+						<li><p><strong>onStopEvent</strong><small>The event added to <a href="Effect.html" target="_blank" >Effect</a>.onStop.</p></li>
+					</ul>
+				</li>
+			</ul>			
 		</div>	
 	</body>	
 </html>

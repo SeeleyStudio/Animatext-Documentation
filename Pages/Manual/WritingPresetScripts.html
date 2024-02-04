@@ -42,13 +42,19 @@
     <span class="note">//Method to get the waiting time of the preset. This is an optional override method.</span>
     <span class="system">protected</span> <span class="keyword">override</span> <span class="return">float</span> <span class="method">GetRangeInterval</span>()
     {
-        0f;
+        <span class="return">return</span> 0f;
     }
 	
     <span class="note">//Method to get the execution time of the preset. This is an optional override method.</span>
     <span class="system">protected</span> <span class="keyword">override</span> <span class="return">float</span> <span class="method">GetExecutionInterval</span>()
     {
-        0f;
+        <span class="return">return</span> 0f;
+    }
+	
+    <span class="note">//Method to get the end time of the preset. This is an optional override method.</span>
+    <span class="system">protected</span> <span class="keyword">override</span> <span class="return">float</span> <span class="method">GetEndInterval</span>()
+    {
+        <span class="return">return</span> float.PositiveInfinity;
     }
 }
 </code></pre>
@@ -59,7 +65,8 @@
 				<li><p><strong>startInterval</strong><small>float</small>The waiting time before executing the preset.</p></li>
 				<li><p><strong>rangeInterval</strong><small>float</small>The waiting time of the preset.</p></li>
 				<li><p><strong>executionInterval</strong><small>float</small>The execution time of the preset.</p></li>
-				<li><p><strong>frontInterval</strong><small>float</small>The start time of the preset.</p></li>			
+				<li><p><strong>frontInterval</strong><small>float</small>The start time of the preset.</p></li>
+				<li><p><strong>endInterval</strong><small>float</small>The end time of the preset.</p></li>
 				<li><p><strong>totalInterval</strong><small>float</small>The total execution interval of of all the preset tag ranges.</p></li>
 			</ul>
 			<p>Note: After modifying the text component parameters or refreshing the Animatext component, the value of lastTime is float.NaN.</p>
