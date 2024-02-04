@@ -28,6 +28,7 @@
 				<li><p><strong>charCount</strong><small>int</small>The count of the original characters.</p></li>
 				<li><p><strong>chars</strong><small><a href="UnitInfo.html" target="_blank" >UnitInfo</a>[]</small>The unit infomation of the original characters.</p></li>
 				<li><p><strong>effect</strong><small><a href="Effect.html" target="_blank" >Effect</a></small>The effect of the preset.</p></li>
+				<li><p><strong>endInterval</strong><small>float</small>The end time of the preset.</p></li>
 				<li><p><strong>executionInterval</strong><small>float</small>The execution time of the preset.</p></li>
 				<li><p><strong>frontInterval</strong><small>float</small>The start time of the preset.</p></li>
 				<li><p><strong>groupCount</strong><small>int</small>The count of the groups.</p></li>
@@ -53,12 +54,14 @@
 			<h3>Protected</h3>
 			<ul>
 				<li><p><strong>Animate()</strong>Animates the units of the preset.</p></li>
+				<li><p><strong>GetEndInterval()</strong><small>float</small>Gets the end time of the preset.</p></li>
 				<li><p><strong>GetExecutionInterval()</strong><small>float</small>Gets the execution time of the preset.</p></li>
 				<li><p><strong>GetRangeInterval()</strong><small>float</small>Gets the waiting time of the preset.</p></li>
 			</ul>			
 			<h3>Public</h3>
 			<ul>
-				<li><p><strong>EarlyExecute(<a href="ExecutionInfo.html" target="_blank" >ExecutionInfo</a> executionInfo)</strong>Updates the execution info of the preset.</p></li>
+				<li><p><strong>BeforeExecute(<a href="ExecutionInfo.html" target="_blank" >ExecutionInfo</a> executionInfo)</strong>Updates the execution info of the preset. This method is called before the "Execute" method.</p></li>
+				<li><p><strong>EarlyExecute(<a href="ExecutionInfo.html" target="_blank" >ExecutionInfo</a> executionInfo)</strong>Updates the execution info of the preset. This method is called before the "BeforeExecute" method.</p></li>
 				<li><p><strong>Execute(<a href="ExecutionInfo.html" target="_blank" >ExecutionInfo</a> executionInfo)</strong>Executes the preset.</p></li>
 			</ul>
 		</div>

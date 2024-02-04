@@ -20,16 +20,17 @@
 			
 			<h2>Fields</h2>
 			<ul>
-				<li><p><strong>animatext</strong><small><a href="BaseAnimatext.html" target="_blank" >BaseAnimatext</a></small>The Animatext component of the execution info.</p></li>
 				<li><p><strong>characterCount</strong><small>int</small>The count of the visible characters.</p></li>
 				<li><p><strong>characters</strong><small><a href="UnitInfo.html" target="_blank" >UnitInfo</a>[]</small>The unit infomation of the visible characters.</p></li>
 				<li><p><strong>charCount</strong><small>int</small>The count of the characters.</p></li>			
 				<li><p><strong>chars</strong><small><a href="UnitInfo.html" target="_blank" >UnitInfo</a>[]</small>The unit infomation of the characters.</p></li>
-				<li><p><strong>effect</strong><small><a href="Effect.html" target="_blank" >Effect</a></small>The effect of the execution info.</p></li>
+				<li><p><strong>endInterval</strong><small>float</small>The end time of the execution info.</p></li>
+				<li><p><strong>executionEffect</strong><small><a href="ExecutionEffect.html" target="_blank" >ExecutionEffect</a></small>The execution effect of the execution info.</p></li>
 				<li><p><strong>executionInterval</strong><small>float</small>The execution time of the execution info.</p></li>
 				<li><p><strong>frontInterval</strong><small>float</small>The start time of the execution info.</p></li>
 				<li><p><strong>groupCount</strong><small>int</small>The count of the groups.</p></li>
 				<li><p><strong>groups</strong><small><a href="UnitInfo.html" target="_blank" >UnitInfo</a>[]</small>The unit infomation of the groups.</p></li>
+				<li><p><strong>isEnd</strong><small>bool</small>Whether the end interval is less than or equal to time.</p></li>
 				<li><p><strong>lastTime</strong><small>float</small>The last time of the execution info.</p></li>
 				<li><p><strong>lineCount</strong><small>int</small>The count of the lines.</p></li>
 				<li><p><strong>lines</strong><small><a href="UnitInfo.html" target="_blank" >UnitInfo</a>[]</small>The unit infomation of the lines.</p></li>
@@ -39,7 +40,6 @@
 				<li><p><strong>rangeInterval</strong><small>float</small>The waiting time of the execution info</p></li>
 				<li><p><strong>startInterval</strong><small>float</small>The waiting time before executing the execution info.</p></li>
 				<li><p><strong>time</strong><small>float</small>The current time of the execution info.</p></li>
-				<li><p><strong>totalInterval</strong><small>float</small>The total execution interval of of all the preset tag ranges.</p></li>
 				<li><p><strong>wordCount</strong><small>int</small>The count of the words.</p></li>
 				<li><p><strong>words</strong><small><a href="UnitInfo.html" target="_blank" >UnitInfo</a>[]</small>The unit infomation of the words.</p></li>
 			</ul>
@@ -47,14 +47,19 @@
 			<h2>Methods</h2>
 			<h3>Public</h3>
 			<ul>
+				<li><p><strong>BeforeExecute()</strong>Updates the execution info. This method is called before the "Execute" method.</p></li>
 				<li>
-					<p><strong>EarlyExecute(float time, float frontInterval)</strong>Updates the execution info.</p>
+					<p><strong>EarlyExecute(float time, float frontInterval)</strong>Updates the execution info. This method is called before the "BeforeExecute" method.</p>
 					<ul>
 						<li><p><strong>time</strong>The execution time of the execution info.</p></li>
 						<li><p><strong>frontInterval</strong>The start time of the execution info.</p></li>
 					</ul>
 				</li>
 				<li><p><strong>Execute()</strong>Executes the execution info.</p></li>
+				<li><p><strong>SetEndInterval(string interval)</strong>Sets the end time of the execution info.</p></li>
+				<li><p><strong>SetExecutionInterval(string interval)</strong>Sets the execution time of the execution info.</p></li>
+				<li><p><strong>SetStartInterval(string interval)</strong>Sets the waiting time before executing the execution info.</p></li>
+				<li><p><strong>SetRangeInterval(string interval)</strong>Sets the waiting time of the execution info.</p></li>
 				<li><p><strong>UpdateAnchor()</strong>Updates all the anchors in the execution info.</p></li>
 			</ul>
 		</div>

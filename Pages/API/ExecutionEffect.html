@@ -16,42 +16,31 @@
 			<ul>
 				<li><p><strong>type</strong>Class</p></li>			
 				<li><p><strong>namespace</strong>Animatext</p></li>	
-				<li><p><strong>implement</strong><a href="https://docs.microsoft.com/en-us/dotnet/api/system.icomparable-1?view=netframework-3.5" target="_blank">System.IComparable&lt;T></a></p></li>
 			</ul>
 			
 			<h2>Fields</h2>
 			<ul>
+				<li><p><strong>animatext</strong><small><a href="BaseAnimatext.html" target="_blank" >BaseAnimatext</a></small>The Animatext component of the execution effect.</p></li>
 				<li><p><strong>effect</strong><small><a href="Effect.html" target="_blank" >Effect</a></small>The effect of the execution effect.</p></li>
-				<li><p><strong>executionInfo</strong><small><a href="ExecutionInfo.html" target="_blank" >ExecutionInfo</a>[]</small>The execution info.</p></li>
-				<li><p><strong>executionInfoCount</strong><small>int</small>The count of the execution info.</p></li>
-				<li><p><strong>executionInterval</strong><small>float</small>The execution time of the execution effect.</p></li>
-				<li><p><strong>closingInterval</strong><small>float</small>The interval of the closing tag.</p></li>
-				<li><p><strong>closingIntervalType</strong><small><a href="IntervalType.html" target="_blank" >IntervalType</a></small>The interval type of the closing tag.</p></li>
-				<li><p><strong>openingInterval</strong><small>float</small>The interval of the opening tag.</p></li>
-				<li><p><strong>openingIntervalType</strong><small><a href="IntervalType.html" target="_blank" >IntervalType</a></small>The interval type of the opening tag.</p></li>
-				<li><p><strong>order</strong><small>Vector3Int</small>The order of the execution effect.</p></li>
-				<li><p><strong>rangeInterval</strong><small>float</small>The waiting time of the execution effect.</p></li>
-				<li><p><strong>startInterval</strong><small>float</small>The waiting time before executing the execution effect.</p></li>
+				<li><p><strong>effectTime</strong><small>float</small>The time of the execution effect.</p></li>
+				<li><p><strong>effectTimeDirty</strong><small>bool</small>Whether to calculate the effect time.</p></li>
+				<li><p><strong>isEnd</strong><small>bool</small>Whether the execution effect ends.</p></li>
+				<li><p><strong>isProceed</strong><small>bool</small>Whether the waiting time of the execution effect is less than or equal to the effect time of the execution effect.</p></li>		
+				<li><p><strong>presets</strong><small><a href="BaseEffect.html" target="_blank" >BaseEffect</a>[]</small>The presets of the execution effect.</p></li>
+				<li><p><strong>rangeCount</strong><small>int</small>The range count of the ranges.</p></li>
+				<li><p><strong>ranges</strong><small><a href="Range.html" target="_blank" >Range</a>[]</small>The index ranges of the execution ranges.</p></li>				
+				<li><p><strong>totalInterval</strong><small>float</small>The total execution interval of the execution effect.</p></li>
+				<li><p><strong>totalIntervalDirty</strong><small>bool</small>Whether to calculate the total execution interval.</p></li>
 			</ul>
 			
 			<h2>Methods</h2>
 			<h3>Public</h3>
 			<ul>
-				<li>
-					<p><strong>CompareTo(ExecutionEffect other)</strong><small>int</small>Compares the current execution effect with another execution effect.</p>
-					<ul>
-						<li><p><strong>implement</strong><a href="https://docs.microsoft.com/en-us/dotnet/api/system.icomparable-1?view=netframework-3.5" target="_blank">System.IComparable&lt;T></a>.CompareTo(T)</p></li>
-					</ul>
-				</li>
-				<li>
-					<p><strong>EarlyExecute(ref float time, ref float frontInterval)</strong>Updates the execution info of the execution effect.</p>
-					<ul>
-						<li><p><strong>time</strong>The execution time of the execution effect.</p></li>
-						<li><p><strong>frontInterval</strong>The start time of the execution effect.</p></li>
-					</ul>
-				</li>
-				<li><p><strong>Execute()</strong>Executes the execution effect.</p></li>
-				<li><p><strong>SetTotalInterval(float totalInterval)</strong>Sets the total execution interval of the execution effect.</p></li>
+				<li><p><strong>Execute(float time)</strong>Executes the execution effect.</p></li>
+				<li><p><strong>SetIntervalDirty()</strong>Marks the intervals of the execution effect as dirty.</p></li>
+				<li><p><strong>SetTimeDirty()</strong>Marks the time of the execution effect as dirty.</p></li>
+				<li><p><strong>UpdateEffectInfo(<a href="BaseEffect.html" target="_blank" >BaseEffect</a>[] presets, <a href="Effect.html" target="_blank" >Effect</a> effect, <a href="BaseAnimatext.html" target="_blank" >BaseAnimatext</a> animatext)</strong>Updates the effect infomation of the execution effect.</p></li>
+				<li><p><strong>UpdateExecutionData(<a href="ExecutionRange.html" target="_blank" >ExecutionRange</a>[] executionRanges)</strong>Updates the data of the execution effect.</p></li>
 			</ul>
 		</div>
 	</body>

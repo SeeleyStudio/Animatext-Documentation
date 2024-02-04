@@ -31,8 +31,10 @@
 			<h2>Properties</h2>
 			<h3>Public</h3>
 			<ul>
-				<li><p><strong>autoPlay</strong><small>bool</small>Automatically plays when the effect is in the start state.</p></li>
-				<li><p><strong>autoStart</strong><small>bool</small>Automatically starts when the effect is refreshed or updated in the stop state.</p></li>
+				<li><p><strong>autoEnd</strong><small>bool</small>Ends automatically when the effect is completed to play in the play state.</p></li>
+				<li><p><strong>autoPlay</strong><small>bool</small>Plays automatically when the effect is in the start state.</p></li>
+				<li><p><strong>autoStart</strong><small>bool</small>Starts automatically when the effect is updated or refreshed in the stop state.</p></li>
+				<li><p><strong>autoStop</strong><small>bool</small>Stops automatically when the effect is in the end state.</p></li>
 				<li><p><strong>refreshMode</strong><small><a href="RefreshMode.html" target="_blank" >RefreshMode</a></small>The refresh mode of the effect. Refresh mode determines the state of the effect after the refresh.</p></li>
 				<li><p><strong>speed</strong><small>float</small>The speed of the effect.</p></li>
 				<li><p><strong>state</strong><small><a href="EffectState.html" target="_blank" >EffectState</a></small>The state of the effect.</p></li>
@@ -62,7 +64,6 @@
 				<li><p><strong>Pause()</strong>Pauses the effect.</p></li>
 				<li><p><strong>Play()</strong>Plays the effect.</p></li>
 				<li><p><strong>Refresh()</strong>Refreshes the effect.</p></li>
-				<li><p><strong>SetIntervalDirty()</strong>Marks the intervals of the effect as dirty.</p></li>
 				<li><p><strong>Start()</strong>Starts the effect.</p></li>
 				<li><p><strong>Stop()</strong>Stops the effect.</p></li>
 				<li><p><strong>Update(<a href="TextInfo.html" target="_blank" >TextInfo</a> textInfo, <a href="BaseAnimatext.html" target="_blank" >BaseAnimatext</a> component)</strong>Updates the effect info.</p></li>
